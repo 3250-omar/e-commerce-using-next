@@ -7,7 +7,6 @@ import { useCartStore } from "@/store/cart-store";
 const Details = ({ product }: { product: Stripe.Product }) => {
   const { addItem, items, removeItem } = useCartStore();
   const price = product.default_price as Stripe.Price;
-  const itemExists = items.find((i) => i.id === product.id);
   const quantity = items.find((i) => i.id == product.id)?.quantity || 0;
 
   const onAddItem = () => {

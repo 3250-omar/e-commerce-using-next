@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent,  CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
 import Image from "next/image";
 import { checkOutActions } from "./checkout";
