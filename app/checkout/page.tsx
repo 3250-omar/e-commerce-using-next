@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent,  CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store";
 import Image from "next/image";
 import { checkOutActions } from "./checkout";
@@ -13,7 +13,6 @@ const CheckoutPage = () => {
     0
   );
 
-  const totalAmount = items.reduce((acc, item) => acc + item.quantity, 0);
   if (totalPrice === 0 || items.length === 0)
     return (
       <div className="text-3xl font-bold text-center text-red-500">
