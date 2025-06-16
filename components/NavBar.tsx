@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
@@ -58,7 +57,7 @@ const NavBar = () => {
           </Button>
           <div>
             <SignedOut>
-              <div className="flex gap-2 *:hover:cursor-pointer font-semibold ">
+              <div className="flex items-center gap-2 *:hover:cursor-pointer *:hover:text-gray-500 font-semibold ">
                 <SignInButton />
                 <SignUpButton />
               </div>

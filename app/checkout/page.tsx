@@ -7,7 +7,6 @@ import { checkOutActions } from "./checkout";
 
 const CheckoutPage = () => {
   const { items, addItem, removeItem } = useCartStore();
-  console.log(items);
   const totalPrice = items.reduce(
     (acc, item) => acc + (item.price / 100) * item.quantity,
     0
