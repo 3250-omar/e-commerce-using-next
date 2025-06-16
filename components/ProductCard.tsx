@@ -7,7 +7,9 @@ import { useCartStore } from "@/store/cart-store";
 
 const ProductCard = ({ product }: { product: Stripe.Product }) => {
   const price = product.default_price as Stripe.Price;
-  const { addItem } = useCartStore();
+  const { addItem, items } = useCartStore();
+  const itemExists = items.find((i) => i.id == product.id);
+
   const onAddItem = () => {
     addItem({
       id: product.id,
@@ -54,6 +56,7 @@ const ProductCard = ({ product }: { product: Stripe.Product }) => {
             onClick={onAddItem}
           >
             Add To Cart
+            {itemExists && ` (${itemExists.quantity})`}
           </p>
         </div>
       </Card>
